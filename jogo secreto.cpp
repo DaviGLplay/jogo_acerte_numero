@@ -1,33 +1,29 @@
 #include <stdio.h>
 #include <stdlib.h>
- 
- 
-  int main(){
- 	int secreto = 4; // Mude aqui o numero secreto 
- 	int chute; 
-	int acertou = 0;
 
-do{
 
-	printf("\n what number? ");
- 	scanf("%i", &chute);
- 	
- 	if(chute == secreto){
- 		printf("\n YOU_WIN ");
- 		acertou = 1;
-	 }else{
-	 	printf("\nGAME_OVER\n\n");
-	 	system("pause");
-	 }
- 	
-}while(acertou == 0);
- 	
- 	
- 	
- 	
- 	
+int main(){
+	
+            int secret = 15;	
+            int select;
+            int win = 0;
+			int vida = 3 ;
+			do{
+				printf("\n you life[%c]:%i \n what number? ",3, vida );
+				scanf("%i" , &select);
+				
+				if(select == secret ){
+					printf("\n GAME_CONCLUDE");
+					win = 1;
+					
+				}else{
+					printf("\n GAME_OVER \n\n");
+					vida --;
+					system("pause");
+						
+				}
+				
+			}while(win == 0 && vida > 0);	
+	
 }
- 	
- 	
- 	
-
+	
